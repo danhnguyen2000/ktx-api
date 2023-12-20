@@ -1,0 +1,14 @@
+F:\KTX test\KTX-API\KTX-DAL\bin\Debug\net6.0\KTX-DAL.deps.json
+F:\KTX test\KTX-API\KTX-DAL\bin\Debug\net6.0\KTX-DAL.runtimeconfig.json
+F:\KTX test\KTX-API\KTX-DAL\bin\Debug\net6.0\KTX-DAL.dll
+F:\KTX test\KTX-API\KTX-DAL\bin\Debug\net6.0\KTX-DAL.pdb
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.csproj.AssemblyReference.cache
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.AssemblyInfoInputs.cache
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.AssemblyInfo.cs
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.csproj.CoreCompileInputs.cache
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.dll
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\refint\KTX-DAL.dll
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.pdb
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\KTX-DAL.genruntimeconfig.cache
+F:\KTX test\KTX-API\KTX-DAL\obj\Debug\net6.0\ref\KTX-DAL.dll

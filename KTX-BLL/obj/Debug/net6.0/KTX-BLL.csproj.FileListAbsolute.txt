@@ -1,0 +1,14 @@
+F:\KTX test\KTX-API\KTX-BLL\bin\Debug\net6.0\KTX-BLL.deps.json
+F:\KTX test\KTX-API\KTX-BLL\bin\Debug\net6.0\KTX-BLL.runtimeconfig.json
+F:\KTX test\KTX-API\KTX-BLL\bin\Debug\net6.0\KTX-BLL.dll
+F:\KTX test\KTX-API\KTX-BLL\bin\Debug\net6.0\KTX-BLL.pdb
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.csproj.AssemblyReference.cache
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.AssemblyInfoInputs.cache
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.AssemblyInfo.cs
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.csproj.CoreCompileInputs.cache
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.dll
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\refint\KTX-BLL.dll
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.pdb
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\KTX-BLL.genruntimeconfig.cache
+F:\KTX test\KTX-API\KTX-BLL\obj\Debug\net6.0\ref\KTX-BLL.dll
