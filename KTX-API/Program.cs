@@ -1,6 +1,8 @@
+using KTX_BLL.Service;
+using KTX_DAL.IRepository;
 using KTX_DAL.Models;
+using KTX_DAL.Repository;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Serialization;
 
@@ -15,18 +17,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
-//Config database
-var ConnectStringServer = builder.Configuration.GetValue<string>("DBConnect:ConnectString:Server");
-var ConnectStringUID = builder.Configuration.GetValue<string>("DBConnect:ConnectString:Uid");
-var ConnectStringPWD = builder.Configuration.GetValue<string>("DBConnect:ConnectString:Pwd");
-var ConnectStringDB = builder.Configuration.GetValue<string>("DBConnect:ConnectString:Database");
-var connectionString = $"server={ConnectStringServer};database={ConnectStringDB};user={ConnectStringUID};password={ConnectStringPWD};persist security info=False;connect timeout=300";
-var serverVersion = new MariaDbServerVersion(new Version(10, 4, 18));
-builder.Services.AddDbContext<DBContext>(options =>
-{
-    options.UseMySql(connectionString, serverVersion);
-});
-
 builder.Services.AddControllers(options =>
 {
     options.RespectBrowserAcceptHeader = true;
@@ -37,6 +27,10 @@ builder.Services.AddControllers(options =>
 {
     options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 });
+
+builder.Services.AddScoped<ITestRepository, TestRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddTransient<UserService>();
 
 
 var app = builder.Build();

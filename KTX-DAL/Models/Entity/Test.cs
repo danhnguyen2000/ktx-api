@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KTX_DAL.Models
+namespace KTX_DAL.Models.Entity
 {
     [Table("Test")]
-    public class Test
+    public class Test : BaseEntity
     {
         [Column("Id")]
         public int Id { get; set; }

@@ -2,7 +2,7 @@
 using System.ComponentModel;
 
 
-namespace KTX_DAL.Models
+namespace KTX_DAL.Models.ResponseModel
 {
     public class DefaultResponseContext
     {
