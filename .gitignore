@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/KTX-API/FileContentIndex
+/KTX-API/obj/Debug/net6.0
+/KTX-API/obj
+/KTX-BLL/obj
+/KTX-DAL/obj
