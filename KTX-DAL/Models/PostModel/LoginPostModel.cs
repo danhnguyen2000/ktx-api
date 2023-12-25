@@ -11,7 +11,7 @@ namespace KTX_DAL.Models.PostModel
     {
         [Required]
         [StringLength(200)]
-        public string Email { get; set; }
+        public string Username { get; set; }
 
         [Required]
         [StringLength(50)]

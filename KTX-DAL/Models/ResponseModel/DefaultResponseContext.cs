@@ -35,4 +35,12 @@ namespace KTX_DAL.Models.ResponseModel
         public object Summary { get; set; }
 
     }
+
+    public class ResponeMessage
+    {
+        public const string SUCCESS = "Success";
+        public const string FAIL = "Something when wrong";
+        public const string NOT_EXISTED = "does not existed";
+        public const string INCORRECT = "incorrect";
+    }
 }

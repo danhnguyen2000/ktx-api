@@ -7,3 +7,8 @@
 /KTX-API/obj
 /KTX-BLL/obj
 /KTX-DAL/obj
+/KTX-API/bin/Debug/net6.0
+/.vs
+/KTX-BLL/bin/Debug/net6.0
+/KTX-DAL/bin/Debug/net6.0
+/KTX-API/log

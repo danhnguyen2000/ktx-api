@@ -50,11 +50,11 @@ namespace KTX_API.Controllers
         {
             try
             {
-                User user = _userRepository.GetByKey(nameof(KTX_DAL.Models.Entity.User.Email), model.Email, KTX_DAL.QueryFlags.Enabled);
+                User user = _userRepository.GetByKey(nameof(KTX_DAL.Models.Entity.User.Username), model.Username, KTX_DAL.QueryFlags.Enabled);
                 if (user == null)
-                    return Unauthorized(new DefaultResponseContext { Message = "Email does not existed" });
+                    return Unauthorized(new DefaultResponseContext { Message = $"Username {ResponeMessage.NOT_EXISTED}"});
                 if (CryptoService.AESHash(model.Password, _secretKey) != user.Password)
-                    return Unauthorized(new DefaultResponseContext { Message = "Response.passwordincorrect" });
+                    return Unauthorized(new DefaultResponseContext { Message = "Password incorrect" });
                 string JwtToken = _userLoginService.Login();
 
                 var data = new { 
@@ -69,7 +69,49 @@ namespace KTX_API.Controllers
                 _logger.LogError(ex, string.Empty);
                 return BadRequest(new DefaultResponseContext { Message = "somethingwhenwrong" });
             }
-            
+        }
+
+        /// <summary>
+        /// Create admin
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpPost("user")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> CreatedUser(LoginPostModel model)
+        {
+            try
+            {
+                var user = new User
+                {
+                    Id = 1,
+                    Username = model.Username,
+                    Password = CryptoService.AESHash(model.Password, _secretKey),
+                    FullName = "System",
+                    CreatedAt = DateTime.Now
+                };
+                var result = await _userRepository.Insert(user);
+
+                if (result > 0)
+                {
+                    _logger.LogError($"Insert operation failed. Result: {result}");
+
+                    // Ném một exception mới
+                    throw new Exception("Test exception: Insert operation failed.");
+                }
+
+                return Ok(new DefaultResponseContext { Message = "Success", Data = result });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, string.Empty);
+                return BadRequest(new DefaultResponseContext { Message = "somethingwhenwrong" });
+            }
+
 
         }
     }
